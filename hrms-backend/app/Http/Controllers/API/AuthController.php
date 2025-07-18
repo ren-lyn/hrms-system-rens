@@ -1,7 +1,7 @@
 <?php
-// hrms-backend/app/Http/Controllers/Api/AuthController.php
+// hrms-backend/app/Http/Controllers/API/AuthController.php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;

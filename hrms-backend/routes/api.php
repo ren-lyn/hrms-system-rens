@@ -2,12 +2,12 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\AuthController;
-use App\Http\Controllers\Api\EmployeeController;
-use App\Http\Controllers\Api\JobPostingController;
-use App\Http\Controllers\Api\ApplicantController;
-use App\Http\Controllers\Api\EmployeeEvaluationController;
-use App\Http\Controllers\Api\EvaluationController;
+use App\Http\Controllers\API\AuthController;
+use App\Http\Controllers\API\EmployeeController;
+use App\Http\Controllers\API\JobPostingController;
+use App\Http\Controllers\API\ApplicantController;
+use App\Http\Controllers\API\EmployeeEvaluationController;
+use App\Http\Controllers\API\EvaluationController;
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/job-postings', [JobPostingController::class, 'index']);
