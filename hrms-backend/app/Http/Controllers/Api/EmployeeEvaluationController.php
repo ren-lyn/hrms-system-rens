@@ -60,6 +60,13 @@ class EmployeeEvaluationController extends Controller
             'total_score' => $total,
         ]);
 
+        $evaluation->load('employee', 'evaluator'); // Load relations
+
+        return response()->json([
+            'message' => 'Evaluation saved',
+            'data' => $evaluation
+        ]);
+
         return response()->json(['message' => 'Evaluation saved', 'data' => $evaluation]);
     }
 
@@ -110,5 +117,14 @@ class EmployeeEvaluationController extends Controller
         $evaluation->delete();
 
         return response()->json(['message' => 'Evaluation deleted']);
+    }
+
+    public function exportPdf($id)
+    {
+        $evaluation = EmployeeEvaluation::with('employee', 'evaluator')->findOrFail($id);
+
+        $pdf = Pdf::loadView('pdf.evaluation', ['evaluation' => $evaluation]);
+
+        return $pdf->download('employee_evaluation_'.$evaluation->id.'.pdf');
     }
 }
