@@ -4,7 +4,7 @@ import {
   Badge, Alert, Spinner, Modal
 } from 'react-bootstrap';
 import {
-  Template, Search, Copy, Eye, Trash2, Plus
+  FileTemplate, Search, Copy, Eye, Trash2, Plus
 } from 'lucide-react';
 import axios from 'axios';
 
@@ -107,7 +107,7 @@ const EvaluationTemplates = () => {
       ) : filteredTemplates.length === 0 ? (
         <Card className="text-center py-5">
           <Card.Body>
-            <Template size={64} className="text-muted mb-3" />
+            <FileTemplate size={64} className="text-muted mb-3" />
             <h5 className="text-muted">No Templates Found</h5>
             <p className="text-muted">
               {searchTerm ? 'No templates match your search criteria.' : 'No templates have been created yet.'}
@@ -122,7 +122,7 @@ const EvaluationTemplates = () => {
                 <Card.Header className="bg-light border-0">
                   <div className="d-flex justify-content-between align-items-start">
                     <Badge bg="primary" className="mb-2">
-                      <Template size={12} className="me-1" />
+                      <FileTemplate size={12} className="me-1" />
                       Template
                     </Badge>
                     <Badge bg="secondary">{template.questions?.length || 0} Questions</Badge>
