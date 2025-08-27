@@ -4,7 +4,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import {
   FaChartPie, FaTachometerAlt, FaUsers, FaMoneyCheckAlt, FaCalendarCheck,
   FaPlaneDeparture, FaStarHalfAlt, FaExclamationTriangle, FaUserPlus,
-  FaChartLine, FaSignOutAlt
+  FaChartLine, FaSignOutAlt, FaCogs
 } from 'react-icons/fa';
 import axios from 'axios'; // Optional: if you want to also clear Axios headers
 
@@ -73,6 +73,14 @@ const Sidebar = () => {
             className={({ isActive }) => (isActive ? 'active' : '')}
           >
             <FaStarHalfAlt /> Employee Evaluation
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="evaluation-management"
+            className={({ isActive }) => (isActive ? 'active' : '')}
+          >
+            <FaCogs /> Evaluation Management
           </NavLink>
         </li>
         <li>

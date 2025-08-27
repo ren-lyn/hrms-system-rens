@@ -17,6 +17,7 @@ import HrAssistantLayout from './pages/HrAssistant/HrAssistantLayout';
 import EmployeeRecords from './pages/HrAssistant/EmployeeRecords';
 import EmployeeEvaluationList from './pages/HrAssistant/Evaluations/EmployeeEvaluationList';
 import EvaluationForm from './pages/HrAssistant/Evaluations/EvaluationForm';
+import EvaluationDashboard from './pages/HrAssistant/Evaluations/EvaluationDashboard';
 
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
           <Route path="employee-records" element={<EmployeeRecords />} />
           <Route path="evaluation" element={<EmployeeEvaluationList />} />
           <Route path="evaluation/:id/form" element={<EvaluationForm />} />
+          <Route path="evaluation-management" element={<EvaluationDashboard />} />
         </Route>
 
 
